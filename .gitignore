@@ -1,0 +1,13 @@
+# Dependencies
+/node_modules
+
+# Build directory
+/.next/
+
+# Production directory
+/out/
+
+# Local environment variables
+.env.localnode_modules
+node_modules
+node_modules
