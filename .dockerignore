@@ -1,0 +1,28 @@
+# Git and Docker
+.git
+.gitignore
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# IDE and OS specific
+.idea
+.vscode
+*.iml
+*.DS_Store
+
+# Local dependencies
+node_modules
+
+# Build output
+.next
+dist
+build
+
+# Environment files
+.env.local
+.env.development.local
+.env.test.local
+
+# Log files
+*.log

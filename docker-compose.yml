@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  # This is the name of our service
+  app:
+    # Build the image from the Dockerfile in the current directory
+    build:
+      context: .
+      # Use the "builder" stage as the target for development to get live reloading
+      target: builder
+    # Mount the local source code into the container
+    # This is the key to live-reloading: changes on your Mac/Windows are
+    # instantly reflected inside the container.
+    volumes:
+      - .:/app
+      # Do not mount the node_modules folder from the host. Let the container manage its own.
+      - /app/node_modules
+    # Forward port 3000 from the container to port 3000 on your local machine
+    ports:
+      - "3000:3000"
+    # Override the default command to start the development server
+    command: npm run dev
+    # Set environment variables for development
+    environment:
+      - NODE_ENV=development
